@@ -11,10 +11,13 @@ Tile matching is a game where players flip pairs of tiles in order to find match
 
 
 * The game will track the number of matching attempts a player makes in a given game as well as the total amount of time it takes to clear all tiles. The score will be recorded as well as the date the game was played to allow players to save their best records as well as track their improvements.
+
 ## Persistent data
 * High score data
+
 ## Device/external services
 TBD
+
 ## Stretch goals/possible enhancements
 * Record Games and save them for later playback
 * Submit high scores to compare with other players
