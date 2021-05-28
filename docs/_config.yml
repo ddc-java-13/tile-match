@@ -8,10 +8,10 @@ titles_from_headings:
 
 # Modify the contents below for the specific project.
 
-title: "Android Project Proposal"
-description: "Trust me, it'll be cool!"
+title: "Tile Matching"
+description: "Construct tile sets from artwork images retrieved by querying one of several publicly accessible art-oriented repositories by keyword. Generate random tile arrangements from a selected tile set. In each turn, flip a pair of tiles: if the tiles match, the tiles are removed from the playing surface and the score increases; otherwise, the tiles are flipped face-down again. The time and the number of pair selections required to clear all tiles are recorded for display in a score summary screen."
 author:
-  name: "Java+Android Student"
+  name: "Marshall Levi Eldridge"
 
 # Do not change the following line.
   copyright: true
