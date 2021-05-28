@@ -1,4 +1,5 @@
 ## Summary
+
 Tile matching is a game where players flip pairs of tiles in order to find matching images. When a match is discovered the tiles are removed from the playing surface otherwise the tiles are flipped face down. The time and number of selections required to clear all tiles are recorded for display in a score summary screen.
 
 ## Intended users
