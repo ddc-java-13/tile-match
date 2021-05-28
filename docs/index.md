@@ -1,11 +1,11 @@
 ## Summary
+
 Tile matching is a game where players flip pairs of tiles in order to find matching images. When a match is discovered the tiles are removed from the playing surface otherwise the tiles are flipped face down. The time and number of selections required to clear all tiles are recorded for display in a score summary screen.
 ## Intended users
 * People who are interested in memory/puzzle solving games.
   > As someone who enjoys puzzle solving games I want a simple game I can quickly play in my free time during travel or breaks.
 * Parents looking for productive distractions for young children.  
   > As a parent I am looking for an interactive tool I can provide my child with in order to aid in development of memory skills.
-
 ## Functionality
 * A new game will generate random tile arrangements from one of several art oriented repositories by keyword. Players will attempt to get a match by selecting pairs of tiles. Matching tiles are removed from the playing surface. Play continues until all tiles have been removed.
 
