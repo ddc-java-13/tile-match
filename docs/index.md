@@ -2,10 +2,10 @@
 
 Construct tile sets from artwork images retrieved by querying one of several publicly accessible art-oriented repositories by keyword. Generate random tile arrangements from a selected tile set. In each turn, flip a pair of tiles: if the tiles match, the tiles are removed from the playing surface and the score increases; otherwise, the tiles are flipped face-down again. The time and the number of pair selections required to clear all tiles are recorded for display in a score summary screen.
 ## Intended users
-* People who are interested in memory/puzzle solving games.
-  > As someone who enjoys puzzle solving games I want a simple game I can quickly play in my free time during travel or breaks.
+* Professionals interested in a quick easily accessible gaming experience.
+  > As someone who works long hours and needs to relax I want a simple game that helps me find focus and enjoyment.
 * Parents looking for productive distractions for young children.  
-  > As a parent I am looking for an interactive tool I can provide my child with in order to aid in development of memory skills.
+  > As a parent of active elementary school-aged children, I am looking for a calming game I can feel good about my children playing that aids in developing fine motor skills.
 
 ## Functionality
 
