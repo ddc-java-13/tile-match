@@ -15,7 +15,7 @@ Construct tile sets from artwork images retrieved by querying one of several pub
 * The game will track the number of matching attempts a player makes in a given game as well as the total amount of time it takes to clear all tiles. The score will be recorded as well as the date the game was played to allow players to save their best records as well as track their improvements.
 
 ## Persistent data
-* High score data
+TBD
 
 ## Device/external services
 TBD
