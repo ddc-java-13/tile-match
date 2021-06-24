@@ -32,4 +32,4 @@ TBD
 
 ## [ERD](erd.md)
 
-## [wireframe](wireframe.md)
+## [Wireframe](wireframe.md)
