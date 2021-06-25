@@ -2,7 +2,7 @@
 title: Wireframe Diagram
 subtitle: "Sketches of application screens and flows between them"
 menu: Wireframe
-order: 10
+order: 20
 ---
 
 ## Wireframe Diagram

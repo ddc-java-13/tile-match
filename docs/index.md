@@ -1,3 +1,10 @@
+---
+title: Summary
+subtitle: "A memory game where players attempt to find matching images by flipping tiles."
+menu: Summary
+order: 10
+---
+
 ## Summary
 
 Construct tile sets from artwork images retrieved by querying one of several publicly accessible art-oriented repositories by keyword. Generate random tile arrangements from a selected tile set. In each turn, flip a pair of tiles: if the tiles match, the tiles are removed from the playing surface and the score increases; otherwise, the tiles are flipped face-down again. The time and the number of pair selections required to clear all tiles are recorded for display in a score summary screen.
