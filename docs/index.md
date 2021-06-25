@@ -37,6 +37,6 @@ TBD
 * Submit high scores to compare with other players
 * Add escalating difficulty options that create moving tiles and/or endless modes that add more tiles as the game progresses.
 
-## [ERD](erd.md)
-
 ## [Wireframe](wireframe.md)
+
+## [ERD](erd.md)
