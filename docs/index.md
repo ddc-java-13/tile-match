@@ -30,7 +30,7 @@ Construct tile sets from artwork images retrieved by querying one of several pub
 * User preferences
 
 ## Device/external services
-TBD
+[Deviant Art](https://www.deviantart.com/developers/http/v1/20210526/browse_topic/2a61608c6f8dfb32f8e12372080cfb34)
 
 ## Stretch goals/possible enhancements
 * Record Games and save them for later playback
