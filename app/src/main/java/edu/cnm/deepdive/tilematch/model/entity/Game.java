@@ -3,15 +3,18 @@ package edu.cnm.deepdive.tilematch.model.entity;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
 import java.util.Date;
 
 @Entity(foreignKeys = @ForeignKey(entity = User.class,
     parentColumns = "id",
-    childColumns = "user_id"))
+    childColumns = "user_id"),
+    indices = {@Index(value = {"game_id", "game_mode"},
+    unique = true)})
 public class Game {
 
-  @PrimaryKey
+  @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "game_id")
   private long id;
 
