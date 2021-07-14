@@ -42,11 +42,9 @@ public interface GameDao {
   @Delete
   Single<Integer> delete(Collection<? extends Game> games);
 
-  @Transaction
   @Query("SELECT * FROM game WHERE game_id = :gameId")
   LiveData<Game> select(long gameId);
 
-  @Transaction
   @Query("SELECT * FROM game ORDER BY play_time ASC")
   LiveData<List<Game>> select();
 

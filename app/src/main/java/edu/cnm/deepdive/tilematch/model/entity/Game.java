@@ -27,7 +27,7 @@ public class Game {
   @ColumnInfo(name = "game_id")
   private long id;
 
-  @Expose
+
   @NonNull
   @ColumnInfo(index = true)
   private Difficulty difficulty;
@@ -36,21 +36,17 @@ public class Game {
 
   private int width;
 
-  @Expose
   @ColumnInfo(name = "play_time", index = true)
   private int playTime;
 
-  @Expose
   @ColumnInfo(index = true)
   private int attempts;
 
-  @Expose
   @NonNull
   @ColumnInfo(index = true)
   private Date timestamp;
 
-  @Expose
-  @ColumnInfo(name = "user_id")
+  @ColumnInfo(name = "user_id", index = true)
   private long userId;
 
 

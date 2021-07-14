@@ -10,7 +10,11 @@ import androidx.room.PrimaryKey;
 import com.google.gson.annotations.Expose;
 import java.util.Date;
 
-@Entity
+@Entity(
+    indices = {
+        @Index(value = {"first_name", "last_name"}, unique = true)
+    }
+)
 public class User {
 
   @PrimaryKey(autoGenerate = true)
@@ -27,7 +31,6 @@ public class User {
   @ColumnInfo(name = "last_name")
   private String lastName;
 
-  @Expose
   @NonNull
   private Date timestamp;
 
