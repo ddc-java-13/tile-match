@@ -4,27 +4,31 @@ import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Ignore;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
+import com.google.gson.annotations.Expose;
 import java.util.Date;
 
-@Entity(foreignKeys = @ForeignKey(entity = User.class,
-    parentColumns = "id",
-    childColumns = "game_id"),
-    indices = {@Index(value = {"user_id", "first_name", "last_name"},
-    unique = true)})
+@Entity
 public class User {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "user_id")
   private long id;
 
+  @Ignore
+  @NonNull
   @ColumnInfo(name = "first_name")
   private String firstName;
 
+  @Ignore
+  @NonNull
   @ColumnInfo(name = "last_name")
   private String lastName;
 
+  @Expose
+  @NonNull
   private Date timestamp;
 
 
@@ -60,5 +64,6 @@ public class User {
   public void setTimestamp(Date timestamp) {
     this.timestamp = timestamp;
   }
+
 }
 

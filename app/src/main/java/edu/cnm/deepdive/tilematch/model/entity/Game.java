@@ -1,38 +1,55 @@
 package edu.cnm.deepdive.tilematch.model.entity;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.Index;
 import androidx.room.PrimaryKey;
+import androidx.room.TypeConverter;
+import androidx.room.TypeConverters;
+import com.google.gson.annotations.Expose;
 import java.util.Date;
 
-@Entity(foreignKeys = @ForeignKey(entity = User.class,
-    parentColumns = "id",
-    childColumns = "user_id"),
-    indices = {@Index(value = {"game_id", "game_mode"},
-    unique = true)})
+@Entity(
+    foreignKeys = {
+        @ForeignKey(
+            entity = User.class,
+            childColumns = {"user_id"},
+            parentColumns = {"user_id"},
+            onDelete = ForeignKey.CASCADE
+        )
+    }
+)
 public class Game {
 
   @PrimaryKey(autoGenerate = true)
   @ColumnInfo(name = "game_id")
   private long id;
 
-  @ColumnInfo(name = "game_mode")
-  private String gameMode;
+  @Expose
+  @NonNull
+  @ColumnInfo(index = true)
+  private Difficulty difficulty;
 
   private int height;
 
   private int width;
 
-  @ColumnInfo(name = "play_time")
+  @Expose
+  @ColumnInfo(name = "play_time", index = true)
   private int playTime;
 
-  @ColumnInfo(name = "match_attempts")
-  private int matchAttempts;
+  @Expose
+  @ColumnInfo(index = true)
+  private int attempts;
 
+  @Expose
+  @NonNull
+  @ColumnInfo(index = true)
   private Date timestamp;
 
+  @Expose
   @ColumnInfo(name = "user_id")
   private long userId;
 
@@ -46,12 +63,13 @@ public class Game {
     this.id = id;
   }
 
-  public String getGameMode() {
-    return gameMode;
+  @NonNull
+  public Difficulty getDifficulty() {
+    return difficulty;
   }
 
-  public void setGameMode(String gameMode) {
-    this.gameMode = gameMode;
+  public void setDifficulty(@NonNull Difficulty difficulty) {
+    this.difficulty = difficulty;
   }
 
   public int getHeight() {
@@ -78,12 +96,12 @@ public class Game {
     this.playTime = playTime;
   }
 
-  public int getMatchAttempts() {
-    return matchAttempts;
+  public int getAttempts() {
+    return attempts;
   }
 
-  public void setMatchAttempts(int matchAttempts) {
-    this.matchAttempts = matchAttempts;
+  public void setAttempts(int attempts) {
+    this.attempts = attempts;
   }
 
   public Date getTimestamp() {
@@ -101,4 +119,19 @@ public class Game {
   public void setUserId(long userId) {
     this.userId = userId;
   }
+
+  public enum Difficulty {
+    EASY, MEDIUM, HARD;
+
+    @TypeConverter
+    public static Integer difficultyToInteger(Difficulty value) {
+      return (value != null) ? value.ordinal() : null;
+    }
+
+    @TypeConverter
+    public static Difficulty integerToDifficulty(Integer value) {
+      return (value != null) ? Difficulty.values()[value] : null;
+    }
+  }
+
 }
