@@ -10,11 +10,7 @@ import androidx.room.PrimaryKey;
 import com.google.gson.annotations.Expose;
 import java.util.Date;
 
-@Entity(
-    indices = {
-        @Index(value = {"first_name", "last_name"}, unique = true)
-    }
-)
+@Entity()
 public class User {
 
   @PrimaryKey(autoGenerate = true)
