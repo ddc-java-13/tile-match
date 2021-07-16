@@ -1,4 +1,4 @@
-package edu.cnm.deepdive.tilematch.model.service;
+package edu.cnm.deepdive.tilematch.service;
 
 import android.app.Application;
 import androidx.room.Database;
@@ -9,9 +9,8 @@ import androidx.room.TypeConverters;
 import edu.cnm.deepdive.tilematch.model.dao.GameDao;
 import edu.cnm.deepdive.tilematch.model.dao.UserDao;
 import edu.cnm.deepdive.tilematch.model.entity.Game;
-import edu.cnm.deepdive.tilematch.model.entity.Game.Difficulty;
 import edu.cnm.deepdive.tilematch.model.entity.User;
-import edu.cnm.deepdive.tilematch.model.service.TileMatchDatabase.Converters;
+import edu.cnm.deepdive.tilematch.service.TileMatchDatabase.Converters;
 import java.util.Date;
 
 @Database(
