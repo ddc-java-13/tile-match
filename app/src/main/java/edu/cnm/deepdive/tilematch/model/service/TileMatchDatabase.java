@@ -9,6 +9,7 @@ import androidx.room.TypeConverters;
 import edu.cnm.deepdive.tilematch.model.dao.GameDao;
 import edu.cnm.deepdive.tilematch.model.dao.UserDao;
 import edu.cnm.deepdive.tilematch.model.entity.Game;
+import edu.cnm.deepdive.tilematch.model.entity.Game.Difficulty;
 import edu.cnm.deepdive.tilematch.model.entity.User;
 import edu.cnm.deepdive.tilematch.model.service.TileMatchDatabase.Converters;
 import java.util.Date;
