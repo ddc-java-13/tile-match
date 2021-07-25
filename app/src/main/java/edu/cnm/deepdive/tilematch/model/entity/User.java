@@ -17,12 +17,12 @@ public class User {
   @ColumnInfo(name = "user_id")
   private long id;
 
-  @Ignore
+
   @NonNull
   @ColumnInfo(name = "first_name")
   private String firstName;
 
-  @Ignore
+
   @NonNull
   @ColumnInfo(name = "last_name")
   private String lastName;
