@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/navigation_graph"
+  app:startDestination="@id/homeFragment">
+
+
+  <fragment
+    android:id="@+id/homeFragment"
+    android:name="edu.cnm.deepdive.tilematch.controller.HomeFragment"
+    android:label="fragment_home"
+    tools:layout="@layout/fragment_home">
+    <action
+      android:id="@+id/action_homeFragment_to_gameFragment"
+      app:destination="@id/gameFragment"/>
+    <action
+      android:id="@+id/action_homeFragment_to_highScoresFragment"
+      app:destination="@id/highScoresFragment"/>
+    <action
+      android:id="@+id/action_homeFragment_to_settingsFragment"
+      app:destination="@id/settingsFragment"/>
+  </fragment>
+  <fragment
+    android:id="@+id/gameFragment"
+    android:name="edu.cnm.deepdive.tilematch.controller.GameFragment"
+    android:label="fragment_game"
+    tools:layout="@layout/fragment_game">
+    <action
+      android:id="@+id/action_gameFragment_to_homeFragment"
+      app:destination="@id/homeFragment"/>
+  </fragment>
+  <fragment
+    android:id="@+id/highScoresFragment"
+    android:name="edu.cnm.deepdive.tilematch.controller.HighScoresFragment"
+    android:label="fragment_high_scores"
+    tools:layout="@layout/fragment_high_scores">
+    <action
+      android:id="@+id/action_highScoresFragment_to_homeFragment"
+      app:destination="@id/homeFragment"/>
+  </fragment>
+  <fragment
+    android:id="@+id/settingsFragment"
+    android:name="edu.cnm.deepdive.tilematch.controller.SettingsFragment"
+    android:label="fragment_settings"
+    tools:layout="@layout/fragment_settings">
+    <action
+      android:id="@+id/action_settingsFragment_to_homeFragment"
+      app:destination="@id/homeFragment"/>
+  </fragment>
+</navigation>

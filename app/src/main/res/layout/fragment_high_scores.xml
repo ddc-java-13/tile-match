@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="horizontal"
+  tools:context=".controller.HighScoresFragment">
+
+  <Button
+    android:id="@+id/back_button"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Back"
+    android:padding="@dimen/half_dynamic_spacing"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintVertical_bias=".99"
+    app:layout_constraintHorizontal_bias=".01"/>
+
+  <Button
+    android:id="@+id/difficulty"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Difficulty"
+    android:padding="@dimen/half_dynamic_spacing"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/match_attempts"/>
+
+  <Button
+    android:id="@+id/match_attempts"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Match Attempts"
+    android:padding="@dimen/half_dynamic_spacing"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toEndOf="@id/difficulty"
+    app:layout_constraintEnd_toStartOf="@id/completion_time"/>
+
+  <Button
+    android:id="@+id/completion_time"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Completion Time"
+    android:padding="@dimen/half_dynamic_spacing"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toEndOf="@id/match_attempts"
+    app:layout_constraintEnd_toStartOf="@id/date_and_time"/>
+
+  <Button
+    android:id="@+id/date_and_time"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Date and Time"
+    android:padding="@dimen/half_dynamic_spacing"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toEndOf="@id/completion_time"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+  <LinearLayout
+    android:id="@+id/scoreboard_constraint"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:orientation="horizontal"
+    app:layout_constraintTop_toBottomOf="@id/difficulty"
+    app:layout_constraintBottom_toTopOf="@id/back_button"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+  <ListView
+    android:id="@+id/difficulty_list"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:padding="@dimen/half_dynamic_spacing"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    app:layout_constraintTop_toTopOf="@id/scoreboard_constraint"
+    app:layout_constraintBottom_toBottomOf="@id/scoreboard_constraint"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toStartOf="@id/match_attempts_list"/>
+
+  <ListView
+    android:id="@+id/match_attempts_list"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:padding="@dimen/half_dynamic_spacing"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    app:layout_constraintTop_toTopOf="@id/scoreboard_constraint"
+    app:layout_constraintBottom_toBottomOf="@id/scoreboard_constraint"
+    app:layout_constraintStart_toEndOf="@id/difficulty_list"
+    app:layout_constraintEnd_toStartOf="@id/completion_time_list"/>
+
+  <ListView
+    android:id="@+id/completion_time_list"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:padding="@dimen/half_dynamic_spacing"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    app:layout_constraintTop_toTopOf="@id/scoreboard_constraint"
+    app:layout_constraintBottom_toBottomOf="@id/scoreboard_constraint"
+    app:layout_constraintStart_toEndOf="@id/match_attempts_list"
+    app:layout_constraintEnd_toStartOf="@id/date_time_list"/>
+
+  <ListView
+    android:id="@+id/date_time_list"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:padding="@dimen/half_dynamic_spacing"
+    android:layout_margin="@dimen/half_dynamic_spacing"
+    app:layout_constraintTop_toTopOf="@id/scoreboard_constraint"
+    app:layout_constraintBottom_toBottomOf="@id/scoreboard_constraint"
+    app:layout_constraintStart_toEndOf="@id/completion_time_list"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

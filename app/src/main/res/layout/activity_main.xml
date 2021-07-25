@@ -5,6 +5,20 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
+  android:orientation="horizontal"
   tools:context=".controller.MainActivity">
 
+
+
+  <fragment
+    android:id="@+id/nav_host_fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:name="androidx.navigation.fragment.NavHostFragment"
+    app:defaultNavHost="true"
+    app:navGraph="@navigation/navigation_graph"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+
