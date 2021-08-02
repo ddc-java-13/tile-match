@@ -32,9 +32,9 @@ public abstract class TileMatchDatabase extends RoomDatabase {
     return InstanceHolder.INSTANCE;
   }
 
-  public abstract UserDao getGameDao();
+  public abstract UserDao getUserDao();
 
-  public abstract GameDao getGuessDao();
+  public abstract GameDao getGameDao();
 
   private static class InstanceHolder {
     private static final TileMatchDatabase INSTANCE =

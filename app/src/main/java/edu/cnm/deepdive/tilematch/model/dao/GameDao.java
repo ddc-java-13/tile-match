@@ -5,6 +5,7 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Transaction;
 import androidx.room.Update;
 import edu.cnm.deepdive.tilematch.model.entity.Game;
 import edu.cnm.deepdive.tilematch.model.pojo.GameWithUser;
@@ -43,18 +44,23 @@ public interface GameDao {
   Single<Integer> delete(Collection<? extends Game> games);
 
   @Query("SELECT * FROM game WHERE game_id = :gameId")
+  @Transaction
   LiveData<GameWithUser> selectByGameId(long gameId);
 
   @Query("SELECT * FROM game ORDER BY play_time ASC")
+  @Transaction
   LiveData<List<GameWithUser>> selectByPlayTime();
 
   @Query("SELECT * FROM game ORDER BY attempts ASC")
+  @Transaction
   LiveData<List<GameWithUser>> selectByAttempts();
 
   @Query("SELECT * FROM game ORDER BY difficulty ASC")
+  @Transaction
   LiveData<List<GameWithUser>> selectByDifficulty();
 
   @Query("SELECT * FROM game ORDER BY timestamp ASC")
+  @Transaction
   LiveData<List<GameWithUser>> selectByTimestamp();
 
 }
