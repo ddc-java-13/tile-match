@@ -3,7 +3,7 @@ package edu.cnm.deepdive.tilematch.service;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import edu.cnm.deepdive.tilematch.BuildConfig;
-import edu.cnm.deepdive.tilematch.model.entity.Gallery;
+import edu.cnm.deepdive.tilematch.model.dto.Image;
 import io.reactivex.Single;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -18,7 +18,7 @@ import retrofit2.http.Query;
 
 public interface GalleryServiceProxy {
     @GET("api")
-    Single<Gallery.SearchResult> getHits(
+    Single<Image.SearchResult> getHits(
         @Query("key") String key, @Query("per_page") int per_page);
 
     static GalleryServiceProxy getInstance() {

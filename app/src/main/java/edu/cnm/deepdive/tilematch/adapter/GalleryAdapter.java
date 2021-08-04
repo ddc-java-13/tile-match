@@ -1,39 +1,40 @@
 package edu.cnm.deepdive.tilematch.adapter;
 
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import com.squareup.picasso.Picasso;
 import edu.cnm.deepdive.tilematch.adapter.GalleryAdapter.Holder;
-import edu.cnm.deepdive.tilematch.adapter.GalleryAdapter.Holder.OnGalleryClickHelper;
 import edu.cnm.deepdive.tilematch.databinding.FragmentGameBinding;
-import edu.cnm.deepdive.tilematch.model.entity.Gallery;
+import edu.cnm.deepdive.tilematch.databinding.ItemGalleryBinding;
+import edu.cnm.deepdive.tilematch.model.dto.Image;
+import edu.cnm.deepdive.tilematch.model.pojo.Tile;
+import edu.cnm.deepdive.tilematch.model.pojo.Tile.State;
 import java.util.List;
 
 public class GalleryAdapter extends RecyclerView.Adapter<Holder> {
 
   private final Context context;
   private final LayoutInflater inflater;
-  private final List<Gallery> galleries;
-  private final OnGalleryClickHelper onGalleryClickHelper;
+  private final List<Tile> tiles;
+  private final OnTileClickHelper onTileClickHelper;
 
-  public GalleryAdapter(Context context, List<Gallery> galleries,
-      OnGalleryClickHelper onGalleryClickHelper) {
+  public GalleryAdapter(Context context, List<Tile> tiles,
+      OnTileClickHelper onTileClickHelper) {
     this.context = context;
     inflater = LayoutInflater.from(context);
-    this.galleries = galleries;
-    this.onGalleryClickHelper = onGalleryClickHelper;
+    this.tiles = tiles;
+    this.onTileClickHelper = onTileClickHelper;
   }
 
   @NonNull
   @Override
   public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-    FragmentGameBinding binding = (FragmentGameBinding.inflate(inflater, parent, false));
-    return new Holder(binding, onGalleryClickHelper);
+    ItemGalleryBinding binding = ItemGalleryBinding.inflate(inflater, parent, false);
+    return new Holder(binding);
   }
 
   @Override
@@ -43,35 +44,38 @@ public class GalleryAdapter extends RecyclerView.Adapter<Holder> {
 
   @Override
   public int getItemCount() {
-    return galleries.size();
+    return tiles.size();
   }
 
-  static class Holder extends RecyclerView.ViewHolder implements OnClickListener {
+  class Holder extends RecyclerView.ViewHolder {
 
-    private final FragmentGameBinding binding;
-    OnGalleryClickHelper onGalleryClickHelper;
-    private Gallery gallery;
+    private final ItemGalleryBinding binding;
+    private Image image;
 
-    public Holder(FragmentGameBinding binding, OnGalleryClickHelper onGalleryClickHelper) {
+    public Holder(ItemGalleryBinding binding) {
       super(binding.getRoot());
       this.binding = binding;
-      this.onGalleryClickHelper = onGalleryClickHelper;
-      binding.getRoot().setOnClickListener((View.OnClickListener) this);
-    }
-
-    @Override
-    public void onClick(DialogInterface dialog, int which) {
-
     }
 
     public void bind(int position) {
-
+      Tile tile = tiles.get(position);
+      if (tile.getState()== State.FACE_DOWN) {
+        binding.number.setText(String.valueOf(position+1));
+        binding.image.setVisibility(View.GONE);
+        binding.number.setVisibility(View.VISIBLE);
+      } else {
+        Picasso.get().load(tile.getUrl())
+            .into(binding.image);
+        binding.number.setVisibility(View.GONE);
+        binding.image.setVisibility(View.VISIBLE);
+      }
+      itemView.setOnClickListener((v) -> onTileClickHelper.onTileClick(v, position));
     }
 
+  }
 
-    public interface OnGalleryClickHelper {
+  public interface OnTileClickHelper {
 
-      void onGalleryClick(String galleryId, View view);
-    }
+    void onTileClick(View view, int position);
   }
 }

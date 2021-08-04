@@ -1,10 +1,10 @@
 package edu.cnm.deepdive.tilematch.model.pojo;
 
 import androidx.room.Relation;
-import edu.cnm.deepdive.tilematch.model.entity.Gallery;
+import edu.cnm.deepdive.tilematch.model.dto.Image;
 import edu.cnm.deepdive.tilematch.model.entity.Game;
 
-public class GameWithGallery extends Gallery{
+public class GameWithImage extends Image {
   @Relation(
       entity = Game.class,
       parentColumn = "game_id",

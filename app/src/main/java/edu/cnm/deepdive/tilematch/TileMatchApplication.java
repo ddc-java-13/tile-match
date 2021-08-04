@@ -27,23 +27,13 @@ public class TileMatchApplication extends Application {
         .delete()
         .subscribeOn(Schedulers.io())
         .subscribe();
-  }
-
-  private void setupPicasso() {
-    OkHttpClient client = new OkHttpClient.Builder()
-        .addInterceptor((Chain chain) ->
-            chain.proceed(
-                chain.request().newBuilder()
-                    .build()
-            )
-        )
-        .build();
     Picasso.setSingletonInstance(
         new Picasso.Builder(this)
-            .downloader(new OkHttp3Downloader(client))
             .loggingEnabled(BuildConfig.DEBUG)
             .build()
     );
+
   }
+
 
 }

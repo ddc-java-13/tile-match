@@ -2,9 +2,13 @@ package edu.cnm.deepdive.tilematch.service;
 
 import android.content.Context;
 import edu.cnm.deepdive.tilematch.BuildConfig;
-import edu.cnm.deepdive.tilematch.model.entity.Gallery;
+import edu.cnm.deepdive.tilematch.model.dto.Image;
+import edu.cnm.deepdive.tilematch.model.dto.Image.SearchResult;
+import edu.cnm.deepdive.tilematch.model.pojo.Tile;
 import io.reactivex.Single;
 import io.reactivex.schedulers.Schedulers;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GalleryRepository {
 
@@ -16,8 +20,19 @@ public class GalleryRepository {
     serviceProxy = GalleryServiceProxy.getInstance();
   }
 
-  public Single<Gallery.SearchResult> getGallery(){
-    return serviceProxy.getHits(BuildConfig.API_KEY,8)
+  public Single<List<Tile>> getGallery() {
+    return serviceProxy
+        .getHits(BuildConfig.API_KEY, 8)
+        .map(SearchResult::getHits)
+        .map((images) -> {
+              List<Tile> tiles = new ArrayList<>();
+              for (Image image : images) {
+                tiles.add(new Tile(image.getWebFormatUrl()));
+                tiles.add(new Tile(image.getWebFormatUrl()));
+              }
+              return tiles;
+            }
+        )
         .subscribeOn(Schedulers.io());
   }
 
