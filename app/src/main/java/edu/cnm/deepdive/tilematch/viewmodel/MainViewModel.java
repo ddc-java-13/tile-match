@@ -7,7 +7,6 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
 import edu.cnm.deepdive.tilematch.model.entity.Gallery;
 import edu.cnm.deepdive.tilematch.service.GalleryRepository;
-import edu.cnm.deepdive.tilematch.service.WebServiceProxy;
 import io.reactivex.disposables.CompositeDisposable;
 
 public class MainViewModel extends AndroidViewModel {
@@ -28,7 +27,7 @@ public class MainViewModel extends AndroidViewModel {
 
   @SuppressLint("CheckResult")
   public void loadHits() {
-    galleryRepository.getSearchResult()
+    galleryRepository.getGallery()
         .subscribe(
             result::postValue,
             throwable::postValue

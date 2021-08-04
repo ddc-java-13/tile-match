@@ -6,32 +6,29 @@ import edu.cnm.deepdive.tilematch.BuildConfig;
 import edu.cnm.deepdive.tilematch.model.entity.Gallery;
 import io.reactivex.Single;
 import okhttp3.OkHttpClient;
-import okhttp3.OkHttpClient.Builder;
 import okhttp3.logging.HttpLoggingInterceptor;
 import okhttp3.logging.HttpLoggingInterceptor.Level;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
-import retrofit2.http.Header;
 import retrofit2.http.Query;
 
 
 
-public interface WebServiceProxy {
+public interface GalleryServiceProxy {
     @GET("api")
     Single<Gallery.SearchResult> getHits(
         @Query("key") String key, @Query("per_page") int per_page);
 
-    static WebServiceProxy getInstance() {
+    static GalleryServiceProxy getInstance() {
       return InstanceHolder.INSTANCE;
     }
 
 
     class InstanceHolder {
 
-      private static final WebServiceProxy INSTANCE;
+      private static final GalleryServiceProxy INSTANCE;
 
       static {
         Gson gson = new GsonBuilder()
@@ -48,7 +45,7 @@ public interface WebServiceProxy {
             .baseUrl(BuildConfig.BASE_URL)
             .client(client)
             .build();
-        INSTANCE = retrofit.create(WebServiceProxy.class);
+        INSTANCE = retrofit.create(GalleryServiceProxy.class);
       }
 
     }

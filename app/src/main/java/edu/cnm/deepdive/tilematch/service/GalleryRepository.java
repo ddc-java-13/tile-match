@@ -9,15 +9,15 @@ import io.reactivex.schedulers.Schedulers;
 public class GalleryRepository {
 
   private final Context context;
-  private final WebServiceProxy webservice;
+  private final GalleryServiceProxy serviceProxy;
 
   public GalleryRepository(Context context) {
     this.context = context;
-    webservice = WebServiceProxy.getInstance();
+    serviceProxy = GalleryServiceProxy.getInstance();
   }
 
-  public Single<Gallery.SearchResult> getSearchResult(){
-    return webservice.getHits(BuildConfig.API_KEY,8)
+  public Single<Gallery.SearchResult> getGallery(){
+    return serviceProxy.getHits(BuildConfig.API_KEY,8)
         .subscribeOn(Schedulers.io());
   }
 
