@@ -12,7 +12,6 @@
     android:id="@+id/back_button"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Back"
     android:padding="@dimen/half_dynamic_spacing"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"
