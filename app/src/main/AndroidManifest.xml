@@ -3,6 +3,8 @@
   xmlns:tools="http://schemas.android.com/tools"
   package="edu.cnm.deepdive.tilematch">
 
+
+
   <uses-permission android:name="android.permission.INTERNET"/>
 
   <application
@@ -12,9 +14,10 @@
     android:name=".TileMatchApplication"
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
-    android:theme="@style/AppTheme"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
     android:usesCleartextTraffic="true"
     tools:ignore="AllowBackup">
+
     <activity android:name=".controller.MainActivity"
       android:screenOrientation="landscape">
       <intent-filter>
