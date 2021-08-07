@@ -40,12 +40,9 @@ public class GameFragment extends Fragment {
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
     viewModel = new ViewModelProvider(this).get(MainViewModel.class);
-    viewModel.getTiles().observe(getViewLifecycleOwner(), (tiles) -> {
-      adapter = new GalleryAdapter(getContext(), tiles, (v, position) ->{
-        Tile tile = tiles.get(position);
-        tile.setState((tile.getState()== State.FACE_DOWN) ? State.FACE_UP : State.FACE_DOWN);
-        adapter.notifyItemChanged(position);
-      });
+    viewModel.getGame().observe(getViewLifecycleOwner(), (game) -> {
+      adapter = new GalleryAdapter(getContext(), game.getTiles(), (v, position) ->
+          viewModel.handleClick(position));
       binding.tileScheme.setAdapter(adapter);
     });
   }

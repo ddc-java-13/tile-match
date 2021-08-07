@@ -2,7 +2,7 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "ee1a8ec0068ea29600f57eb1f4280822",
+    "identityHash": "a2f84310f7efaf2711ac98969c1cf06d",
     "entities": [
       {
         "tableName": "User",
@@ -44,7 +44,7 @@
       },
       {
         "tableName": "Game",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`game_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `difficulty` TEXT NOT NULL, `height` INTEGER NOT NULL, `width` INTEGER NOT NULL, `play_time` INTEGER NOT NULL, `attempts` INTEGER NOT NULL, `timestamp` INTEGER NOT NULL, `user_id` INTEGER NOT NULL, FOREIGN KEY(`user_id`) REFERENCES `User`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`game_id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `difficulty` TEXT NOT NULL, `height` INTEGER NOT NULL, `width` INTEGER NOT NULL, `play_time` INTEGER NOT NULL, `attempts` INTEGER NOT NULL, `timestamp` INTEGER NOT NULL, `user_id` INTEGER, FOREIGN KEY(`user_id`) REFERENCES `User`(`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
         "fields": [
           {
             "fieldPath": "id",
@@ -92,7 +92,7 @@
             "fieldPath": "userId",
             "columnName": "user_id",
             "affinity": "INTEGER",
-            "notNull": true
+            "notNull": false
           }
         ],
         "primaryKey": {
@@ -161,7 +161,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'ee1a8ec0068ea29600f57eb1f4280822')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'a2f84310f7efaf2711ac98969c1cf06d')"
     ]
   }
 }

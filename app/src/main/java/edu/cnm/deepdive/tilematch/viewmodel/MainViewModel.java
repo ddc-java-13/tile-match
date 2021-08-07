@@ -2,37 +2,36 @@ package edu.cnm.deepdive.tilematch.viewmodel;
 
 import android.annotation.SuppressLint;
 import android.app.Application;
+import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
-import edu.cnm.deepdive.tilematch.model.pojo.Tile;
-import edu.cnm.deepdive.tilematch.service.GalleryRepository;
+import edu.cnm.deepdive.tilematch.model.entity.Game;
+import edu.cnm.deepdive.tilematch.service.GameRepository;
 import io.reactivex.disposables.CompositeDisposable;
-import java.util.Collections;
-import java.util.List;
 import java.util.Random;
 
 public class MainViewModel extends AndroidViewModel {
 
-  private final MutableLiveData<List<Tile>> tiles;
+  private final MutableLiveData<Game> game;
   private final MutableLiveData<Throwable> throwable;
-  private final GalleryRepository galleryRepository;
+  private final GameRepository gameRepository;
   private final CompositeDisposable pending;
   private final Random rng;
 
   public MainViewModel(@NonNull Application application) {
     super(application);
-    tiles = new MutableLiveData<>();
+    game = new MutableLiveData<>();
     throwable = new MutableLiveData<>();
-    galleryRepository = new GalleryRepository(application);
-    pending = new CompositeDisposable();
     rng = new Random();
-    loadHits();
+    gameRepository = new GameRepository(application, rng);
+    pending = new CompositeDisposable();
+    startGame();
   }
 
-  public LiveData<List<Tile>> getTiles() {
-    return tiles;
+  public LiveData<Game> getGame() {
+    return game;
   }
 
   public LiveData<Throwable> getThrowable() {
@@ -40,19 +39,30 @@ public class MainViewModel extends AndroidViewModel {
   }
 
   @SuppressLint("CheckResult")
-  public void loadHits() {
+  public void startGame() {
     pending.add(
-        galleryRepository.getGallery()
+        gameRepository.startGame()
             .subscribe(
-                (value) -> {
-                  Collections.shuffle(value,rng);
-                  tiles.postValue(value);
-                },
-                throwable::postValue
+                game::postValue,
+                this::setThrowable
             )
     );
   }
 
+  public void handleClick(int position) {
 
+    //noinspection ConstantConditions
+    pending.add(
+        gameRepository.handleSelection(game.getValue(), position)
+            .subscribe(
+                game::postValue,
+                this::setThrowable
+            )
+    );
+  }
 
+  private void setThrowable(Throwable throwable) {
+    Log.e(getClass().getSimpleName(), throwable.getMessage(), throwable);
+    this.throwable.postValue(throwable);
+  }
 }
