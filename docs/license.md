@@ -1,9 +1,3 @@
----
-title: License Information
-menu: License Information
-order: 60
----
-
 ## Tile Match
 
 Copyright 2021 Marshall Eldridge,
