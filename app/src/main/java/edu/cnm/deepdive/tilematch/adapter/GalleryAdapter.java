@@ -15,6 +15,9 @@ import edu.cnm.deepdive.tilematch.model.pojo.Tile;
 import edu.cnm.deepdive.tilematch.model.pojo.Tile.State;
 import java.util.List;
 
+/**
+ * GalleryAdapter class extends RecyclerView.
+ */
 public class GalleryAdapter extends RecyclerView.Adapter<Holder> {
 
   private final Context context;
@@ -22,6 +25,12 @@ public class GalleryAdapter extends RecyclerView.Adapter<Holder> {
   private final List<Tile> tiles;
   private final OnTileClickHelper onTileClickHelper;
 
+  /**
+   * Constructor for GalleryAdapter class
+   * @param context
+   * @param tiles
+   * @param onTileClickHelper
+   */
   public GalleryAdapter(Context context, List<Tile> tiles,
       OnTileClickHelper onTileClickHelper) {
     this.context = context;
@@ -30,6 +39,12 @@ public class GalleryAdapter extends RecyclerView.Adapter<Holder> {
     this.onTileClickHelper = onTileClickHelper;
   }
 
+  /**
+   * Creates a holder instance for the GalleryAdapter class.
+   * @param parent
+   * @param viewType
+   * @return
+   */
   @NonNull
   @Override
   public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -37,26 +52,45 @@ public class GalleryAdapter extends RecyclerView.Adapter<Holder> {
     return new Holder(binding);
   }
 
+  /**
+   * Update recyclerView with holder at given position.
+   * @param holder
+   * @param position
+   */
   @Override
   public void onBindViewHolder(@NonNull Holder holder, int position) {
     holder.bind(position);
   }
 
+  /**
+   * Returns number of tiles.
+   * @return
+   */
   @Override
   public int getItemCount() {
     return tiles.size();
   }
+
 
   class Holder extends RecyclerView.ViewHolder {
 
     private final ItemGalleryBinding binding;
     private Image image;
 
+    /**
+     * Create binding instance for Holder subclass.
+     * @param binding
+     */
     public Holder(ItemGalleryBinding binding) {
       super(binding.getRoot());
       this.binding = binding;
     }
 
+    /**
+     * Defines tile state and sets on click listeners to each instance of a tile. Utilizes picasso
+     * to load images at tile positions.
+     * @param position
+     */
     public void bind(int position) {
       Tile tile = tiles.get(position);
       if (tile.getState()== State.FACE_DOWN) {
@@ -74,6 +108,9 @@ public class GalleryAdapter extends RecyclerView.Adapter<Holder> {
 
   }
 
+  /**
+   * Helper method for GalleryAdapter constructor.
+   */
   public interface OnTileClickHelper {
 
     void onTileClick(View view, int position);

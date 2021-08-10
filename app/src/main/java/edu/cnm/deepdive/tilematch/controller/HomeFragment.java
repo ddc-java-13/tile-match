@@ -11,10 +11,20 @@ import androidx.navigation.Navigation;
 import edu.cnm.deepdive.tilematch.R;
 import edu.cnm.deepdive.tilematch.databinding.FragmentHomeBinding;
 
+/**
+ * HomeFragment extends fragment.
+ */
 public class HomeFragment extends Fragment {
 
   private FragmentHomeBinding binding;
 
+  /**
+   * Inflates layout to viewGroup container. Defines navigation controller for the HomeFragment.
+   * @param inflater
+   * @param container
+   * @param savedInstanceState
+   * @return
+   */
   @Override
   public View onCreateView(LayoutInflater inflater, ViewGroup container,
       Bundle savedInstanceState) {

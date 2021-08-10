@@ -12,6 +12,9 @@ import edu.cnm.deepdive.tilematch.service.GameRepository;
 import io.reactivex.disposables.CompositeDisposable;
 import java.util.Random;
 
+/**
+ * MainViewModel extends AndroidViewModel.
+ */
 public class MainViewModel extends AndroidViewModel {
 
   private final MutableLiveData<Game> game;
@@ -20,6 +23,10 @@ public class MainViewModel extends AndroidViewModel {
   private final CompositeDisposable pending;
   private final Random rng;
 
+  /**
+   * MainViewModel constructor.
+   * @param application
+   */
   public MainViewModel(@NonNull Application application) {
     super(application);
     game = new MutableLiveData<>();
@@ -30,14 +37,25 @@ public class MainViewModel extends AndroidViewModel {
     startGame();
   }
 
+  /**
+   * Getter for game live data.
+   * @return
+   */
   public LiveData<Game> getGame() {
     return game;
   }
 
+  /**
+   * Getter for throwable.
+   * @return
+   */
   public LiveData<Throwable> getThrowable() {
     return throwable;
   }
 
+  /**
+   * Subscribes on MutableLiveData for a game.
+   */
   @SuppressLint("CheckResult")
   public void startGame() {
     pending.add(
@@ -49,6 +67,10 @@ public class MainViewModel extends AndroidViewModel {
     );
   }
 
+  /**
+   * Subscribes on clicks at given position in a game.
+   * @param position
+   */
   public void handleClick(int position) {
 
     //noinspection ConstantConditions

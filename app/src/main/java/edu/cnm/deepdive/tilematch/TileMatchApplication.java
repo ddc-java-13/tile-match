@@ -16,6 +16,9 @@ import okhttp3.OkHttpClient;
  */
 public class TileMatchApplication extends Application {
 
+  /**
+   * Initializes Stetho and Picasso.
+   */
   @Override
   public void onCreate() {
     super.onCreate();

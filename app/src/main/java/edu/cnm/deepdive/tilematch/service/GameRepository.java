@@ -20,6 +20,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
+/**
+ * Game repository class
+ */
 public class GameRepository {
 
   private final Context context;
@@ -27,6 +30,11 @@ public class GameRepository {
   private final GalleryServiceProxy serviceProxy;
   private final GameDao gameDao;
 
+  /**
+   * Constructor for game repository
+   * @param context
+   * @param rng
+   */
   public GameRepository(Context context, Random rng) {
     this.context = context;
     this.rng = rng;
@@ -34,6 +42,10 @@ public class GameRepository {
     gameDao = TileMatchDatabase.getInstance().getGameDao();
   }
 
+  /**
+   * Single task maps search results to array list and subscribes on background thread.
+   * @return
+   */
   public Single<List<Tile>> getGallery() {
     return serviceProxy
         .getHits(BuildConfig.API_KEY, 8)
@@ -50,6 +62,10 @@ public class GameRepository {
         .subscribeOn(Schedulers.io());
   }
 
+  /**
+   * Single task maps images from gallery to tiles in a game.
+   * @return
+   */
   public Single<Game> startGame() { //TODO add param for difficulty.
     return getGallery()
         .map((tiles) -> {
@@ -62,6 +78,10 @@ public class GameRepository {
         });
   }
 
+  /**
+   * Single task maps tiles to positions in a game and game state changes on background thread.
+   * @return
+   */
   public Single<Game> handleSelection(@NonNull Game game, int position) {
     List<Tile> tiles = game.getTiles();
     Tile tile = tiles.get(position);

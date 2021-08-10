@@ -16,12 +16,22 @@ import edu.cnm.deepdive.tilematch.model.pojo.Tile;
 import edu.cnm.deepdive.tilematch.model.pojo.Tile.State;
 import edu.cnm.deepdive.tilematch.viewmodel.MainViewModel;
 
+/**
+ * GameFragment class extends fragment.
+ */
 public class GameFragment extends Fragment {
 
   private FragmentGameBinding binding;
   private MainViewModel viewModel;
   private GalleryAdapter adapter;
 
+  /**
+   * Inflates layout to viewGroup container. Defines navigation controller for the GameFragment.
+   * @param inflater
+   * @param container
+   * @param savedInstanceState
+   * @return
+   */
   @Nullable
   @Override
   public View onCreateView(@NonNull LayoutInflater inflater,
@@ -36,6 +46,11 @@ public class GameFragment extends Fragment {
 
   }
 
+  /**
+   * Initializes viewModel. Map tiles to positions in recyclerView.
+   * @param view
+   * @param savedInstanceState
+   */
   @Override
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);

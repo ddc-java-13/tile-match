@@ -11,10 +11,20 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import edu.cnm.deepdive.tilematch.databinding.FragmentHighScoresBinding;
 
+/**
+ * HighScoresFragment extends fragment.
+ */
 public class HighScoresFragment extends Fragment {
 
   private FragmentHighScoresBinding binding;
 
+  /**
+   * Inflates layout to viewGroup container. Defines navigation controller for the HighScoreFragment.
+   * @param inflater
+   * @param container
+   * @param savedInstanceState
+   * @return
+   */
   @Nullable
   @Override
   public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,

@@ -5,6 +5,10 @@ menu: Summary
 order: 10
 ---
 
+## [Introduction](introduction.md)
+
+## [Current State](current-state.md)
+
 ## Summary
 
 Construct tile sets from artwork images retrieved by querying one of several publicly accessible art-oriented repositories by keyword. Generate random tile arrangements from a selected tile set. In each turn, flip a pair of tiles: if the tiles match, the tiles are removed from the playing surface and the score increases; otherwise, the tiles are flipped face-down again. The time and the number of pair selections required to clear all tiles are recorded for display in a score summary screen.
@@ -23,6 +27,7 @@ Construct tile sets from artwork images retrieved by querying one of several pub
 * The game will support customizable difficulty settings for beginner to advanced players.
 
 ## Persistent data
+
 * Difficulty settings
 * Game length
 * matching attempts
@@ -30,9 +35,11 @@ Construct tile sets from artwork images retrieved by querying one of several pub
 * User preferences
 
 ## Device/external services
+
 [Deviant Art](https://www.deviantart.com/developers/http/v1/20210526/browse_topic/2a61608c6f8dfb32f8e12372080cfb34) Image source for images used on tiles for matching. 
 
 ## Stretch goals/possible enhancements
+
 * Record Games and save them for later playback
 * Submit high scores to compare with other players
 * Add escalating difficulty options that create moving tiles and/or endless modes that add more tiles as the game progresses.

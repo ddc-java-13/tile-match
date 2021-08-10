@@ -15,7 +15,9 @@ import retrofit2.http.GET;
 import retrofit2.http.Query;
 
 
-
+/**
+ * GalleryServiceProxy interface queries api for search results.
+ */
 public interface GalleryServiceProxy {
     @GET("api")
     Single<Image.SearchResult> getHits(

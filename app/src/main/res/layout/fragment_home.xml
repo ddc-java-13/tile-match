@@ -9,20 +9,20 @@
 
   <Button
     android:id="@+id/start_game"
-    android:layout_width="wrap_content"
+    android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:text="Start Game"
+    android:text="@string/start_game_button_text"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@id/game_settings"
+    app:layout_constraintEnd_toEndOf="@id/game_settings"
     app:layout_constraintVertical_bias=".1"/>
 
   <Button
     android:id="@+id/game_settings"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Game Settings"
+    android:text="@string/game_settings_button_text"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"
     app:layout_constraintStart_toStartOf="parent"
@@ -31,13 +31,13 @@
 
   <Button
     android:id="@+id/high_scores"
-    android:layout_width="wrap_content"
+    android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:text="Hi Scores"
+    android:text="@string/hi_scores_button_text"
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@id/game_settings"
+    app:layout_constraintEnd_toEndOf="@id/game_settings"
     app:layout_constraintVertical_bias=".94"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
