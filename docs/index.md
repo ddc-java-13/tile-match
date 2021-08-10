@@ -36,7 +36,7 @@ Construct tile sets from artwork images retrieved by querying one of several pub
 
 ## Device/external services
 
-[Deviant Art](https://www.deviantart.com/developers/http/v1/20210526/browse_topic/2a61608c6f8dfb32f8e12372080cfb34) Image source for images used on tiles for matching. 
+[Pixabay](https://pixabay.com/service/about/api/) Image source for images used on tiles for matching. 
 
 ## Stretch goals/possible enhancements
 
@@ -47,3 +47,5 @@ Construct tile sets from artwork images retrieved by querying one of several pub
 ## [Wireframe](wireframe.md)
 
 ## [ERD](erd.md)
+
+## [Technical Requirements](technical.md)

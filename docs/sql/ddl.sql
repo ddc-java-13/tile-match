@@ -1,7 +1,9 @@
 CREATE TABLE IF NOT EXISTS `User`
 (
-    `user_id`   INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    `timestamp` INTEGER                           NOT NULL
+    `user_id`    INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    `first_name` TEXT                              NOT NULL,
+    `last_name`  TEXT                              NOT NULL,
+    `timestamp`  INTEGER                           NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS `Game`
@@ -13,7 +15,7 @@ CREATE TABLE IF NOT EXISTS `Game`
     `play_time`  INTEGER                           NOT NULL,
     `attempts`   INTEGER                           NOT NULL,
     `timestamp`  INTEGER                           NOT NULL,
-    `user_id`    INTEGER                           NOT NULL,
+    `user_id`    INTEGER,
     FOREIGN KEY (`user_id`) REFERENCES `User` (`user_id`) ON UPDATE NO ACTION ON DELETE CASCADE
 );
 
