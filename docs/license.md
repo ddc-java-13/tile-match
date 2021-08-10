@@ -1,5 +1,5 @@
 ---
-
+title: Technical
 menu: Technical Requirements
 order: 60
 ---
