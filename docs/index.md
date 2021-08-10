@@ -7,7 +7,7 @@ order: 10
 
 ## [Introduction](introduction.md)
 
-## [Current State](current-state.md)
+## [Current State](current.md)
 
 ## Summary
 
@@ -48,7 +48,7 @@ Construct tile sets from artwork images retrieved by querying one of several pub
 
 ## [ERD](erd.md)
 
-## [Data Model](data-model.md)
+## [Data Model](data.md)
 
 ## [Technical Requirements](technical.md)
 

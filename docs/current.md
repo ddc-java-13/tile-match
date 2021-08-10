@@ -1,5 +1,5 @@
 ---
-title: Current
+title: Current State
 subtitle: "Summary of the current state of Tile Match"
 menu: Current State
 order: 16

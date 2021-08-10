@@ -1,6 +1,6 @@
 ---
-title: Technical
-menu: Technical Requirements
+title: License Information
+menu: License Information
 order: 60
 ---
 
