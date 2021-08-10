@@ -53,3 +53,5 @@ Construct tile sets from artwork images retrieved by querying one of several pub
 ## [Technical Requirements](technical.md)
 
 ## [License Information](license.md)
+
+## [Instructions](instructions.md)

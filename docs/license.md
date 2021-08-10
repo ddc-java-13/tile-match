@@ -1,6 +1,6 @@
 ---
-title: License Information
-menu: License Information
+title: License
+menu: License
 order: 60
 ---
 

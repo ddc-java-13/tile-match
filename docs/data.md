@@ -1,5 +1,5 @@
 ---
-title: Data Model Links
+title: Data Model
 subtitle: "Links to database and database related classes"
 menu: Data Model 
 order: 40

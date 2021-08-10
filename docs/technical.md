@@ -1,6 +1,6 @@
 ---
-title: Technical Requirements
-menu: Technical Requirements
+title: Technical
+menu: Technical
 order: 50
 ---
 

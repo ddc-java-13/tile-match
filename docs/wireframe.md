@@ -1,5 +1,5 @@
 ---
-title: Wireframe Diagram
+title: Wireframe
 subtitle: "Sketches of application screens and flows between them"
 menu: Wireframe
 order: 20

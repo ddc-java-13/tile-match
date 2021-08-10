@@ -1,7 +1,6 @@
 ---
 title: Instructions
-
-menu: 
+menu: Instructions
 order: 100
 ---
 

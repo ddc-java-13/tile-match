@@ -1,5 +1,5 @@
 ---
-title: Entity-Relationship Diagram
+title: ERD
 subtitle: "Data model entities, attributes, and relationships"
 menu: ERD
 order: 30
