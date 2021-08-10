@@ -52,6 +52,4 @@ Construct tile sets from artwork images retrieved by querying one of several pub
 
 ## [Technical Requirements](technical.md)
 
-## [Java Docs](http://localhost:63342/Tile%20Match/Tile_Match/docs/api/index.html?_ijt=v2ghlopmop359vn4eb7vtn2m7t&_ij_reload)
-
 ## [License Information](license.md)
