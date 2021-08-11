@@ -29,6 +29,7 @@ public abstract class TileMatchDatabase extends RoomDatabase {
 
   /**
    * Method for creating an instance of context for TileMatchDatabase.
+   *
    * @param context
    */
   public static void setContext(Application context) {
@@ -37,6 +38,7 @@ public abstract class TileMatchDatabase extends RoomDatabase {
 
   /**
    * Getter for InstanceHolder for TileMatchDatabase.
+   *
    * @return
    */
   public static TileMatchDatabase getInstance() {
@@ -45,17 +47,20 @@ public abstract class TileMatchDatabase extends RoomDatabase {
 
   /**
    * Getter for UserDao.
+   *
    * @return
    */
   public abstract UserDao getUserDao();
 
   /**
    * Getter for GameDao.
+   *
    * @return
    */
   public abstract GameDao getGameDao();
 
   private static class InstanceHolder {
+
     private static final TileMatchDatabase INSTANCE =
         Room.databaseBuilder(context, TileMatchDatabase.class, DB_NAME)
             .build();
@@ -68,6 +73,7 @@ public abstract class TileMatchDatabase extends RoomDatabase {
 
     /**
      * Type converter for dato to long.
+     *
      * @param value
      * @return
      */
@@ -78,6 +84,7 @@ public abstract class TileMatchDatabase extends RoomDatabase {
 
     /**
      * Type converter for long to date.
+     *
      * @param value
      * @return
      */

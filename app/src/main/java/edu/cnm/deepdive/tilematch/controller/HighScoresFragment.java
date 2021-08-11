@@ -19,7 +19,9 @@ public class HighScoresFragment extends Fragment {
   private FragmentHighScoresBinding binding;
 
   /**
-   * Inflates layout to viewGroup container. Defines navigation controller for the HighScoreFragment.
+   * Inflates layout to viewGroup container. Defines navigation controller for the
+   * HighScoreFragment.
+   *
    * @param inflater
    * @param container
    * @param savedInstanceState

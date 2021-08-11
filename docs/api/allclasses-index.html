@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":2,"i1":1,"i2":1,"i3":1,"i4":2,"i5":2,"i6":4,"i7":4,"i8":1,"i9":2,"i10":2,"i11":2,"i12":2,"i13":2,"i14":2,"i15":2,"i16":2,"i17":2,"i18":2,"i19":2,"i20":2,"i21":2,"i22":4,"i23":2,"i24":2,"i25":2,"i26":2,"i27":1,"i28":2};
+var data = {"i0":2,"i1":1,"i2":1,"i3":1,"i4":2,"i5":2,"i6":4,"i7":4,"i8":1,"i9":2,"i10":2,"i11":2,"i12":2,"i13":2,"i14":2,"i15":2,"i16":2,"i17":2,"i18":2,"i19":2,"i20":2,"i21":2,"i22":2,"i23":4,"i24":2,"i25":2,"i26":2,"i27":2,"i28":1,"i29":2};
 var tabs = {65535:["t0","All Classes"],1:["t1","Interface Summary"],2:["t2","Class Summary"],4:["t3","Enum Summary"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -139,15 +139,21 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><a href="edu/cnm/deepdive/tilematch/model/entity/Game.html" title="class in edu.cnm.deepdive.tilematch.model.entity">Game</a></td>
-<th class="colLast" scope="row">&nbsp;</th>
+<th class="colLast" scope="row">
+<div class="block">Game entity class.</div>
+</th>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><a href="edu/cnm/deepdive/tilematch/model/entity/Game.Difficulty.html" title="enum in edu.cnm.deepdive.tilematch.model.entity">Game.Difficulty</a></td>
-<th class="colLast" scope="row">&nbsp;</th>
+<th class="colLast" scope="row">
+<div class="block">Game difficulty enum.</div>
+</th>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><a href="edu/cnm/deepdive/tilematch/model/entity/Game.State.html" title="enum in edu.cnm.deepdive.tilematch.model.entity">Game.State</a></td>
-<th class="colLast" scope="row">&nbsp;</th>
+<th class="colLast" scope="row">
+<div class="block">Game state enum.</div>
+</th>
 </tr>
 <tr id="i8" class="altColor">
 <td class="colFirst"><a href="edu/cnm/deepdive/tilematch/model/dao/GameDao.html" title="interface in edu.cnm.deepdive.tilematch.model.dao">GameDao</a></td>
@@ -169,11 +175,15 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><a href="edu/cnm/deepdive/tilematch/model/pojo/GameWithImage.html" title="class in edu.cnm.deepdive.tilematch.model.pojo">GameWithImage</a></td>
-<th class="colLast" scope="row">&nbsp;</th>
+<th class="colLast" scope="row">
+<div class="block">Pojo connecte game and image classes</div>
+</th>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><a href="edu/cnm/deepdive/tilematch/model/pojo/GameWithUser.html" title="class in edu.cnm.deepdive.tilematch.model.pojo">GameWithUser</a></td>
-<th class="colLast" scope="row">&nbsp;</th>
+<th class="colLast" scope="row">
+<div class="block">Pojo connects Game and User class</div>
+</th>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><a href="edu/cnm/deepdive/tilematch/controller/HighScoresFragment.html" title="class in edu.cnm.deepdive.tilematch.controller">HighScoresFragment</a></td>
@@ -216,50 +226,64 @@ $('.navPadding').css('padding-top', $('.fixedNav').css("height"));
 </th>
 </tr>
 <tr id="i20" class="altColor">
+<td class="colFirst"><a href="edu/cnm/deepdive/tilematch/controller/PreferencesFragment.html" title="class in edu.cnm.deepdive.tilematch.controller">PreferencesFragment</a></td>
+<th class="colLast" scope="row">
+<div class="block">Preference fragment class extends preference fragment compat.</div>
+</th>
+</tr>
+<tr id="i21" class="rowColor">
 <td class="colFirst"><a href="edu/cnm/deepdive/tilematch/controller/SettingsFragment.html" title="class in edu.cnm.deepdive.tilematch.controller">SettingsFragment</a></td>
 <th class="colLast" scope="row">
 <div class="block">SettingsFragment extends fragment.</div>
 </th>
 </tr>
-<tr id="i21" class="rowColor">
-<td class="colFirst"><a href="edu/cnm/deepdive/tilematch/model/pojo/Tile.html" title="class in edu.cnm.deepdive.tilematch.model.pojo">Tile</a></td>
-<th class="colLast" scope="row">&nbsp;</th>
-</tr>
 <tr id="i22" class="altColor">
-<td class="colFirst"><a href="edu/cnm/deepdive/tilematch/model/pojo/Tile.State.html" title="enum in edu.cnm.deepdive.tilematch.model.pojo">Tile.State</a></td>
-<th class="colLast" scope="row">&nbsp;</th>
+<td class="colFirst"><a href="edu/cnm/deepdive/tilematch/model/pojo/Tile.html" title="class in edu.cnm.deepdive.tilematch.model.pojo">Tile</a></td>
+<th class="colLast" scope="row">
+<div class="block">Tile class.</div>
+</th>
 </tr>
 <tr id="i23" class="rowColor">
+<td class="colFirst"><a href="edu/cnm/deepdive/tilematch/model/pojo/Tile.State.html" title="enum in edu.cnm.deepdive.tilematch.model.pojo">Tile.State</a></td>
+<th class="colLast" scope="row">
+<div class="block">Tile stats enum.</div>
+</th>
+</tr>
+<tr id="i24" class="altColor">
 <td class="colFirst"><a href="edu/cnm/deepdive/tilematch/TileMatchApplication.html" title="class in edu.cnm.deepdive.tilematch">TileMatchApplication</a></td>
 <th class="colLast" scope="row">
 <div class="block">Initializes (in the <a href="edu/cnm/deepdive/tilematch/TileMatchApplication.html#onCreate()"><code>TileMatchApplication.onCreate()</code></a> method) application-level resources.</div>
 </th>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><a href="edu/cnm/deepdive/tilematch/service/TileMatchDatabase.html" title="class in edu.cnm.deepdive.tilematch.service">TileMatchDatabase</a></td>
 <th class="colLast" scope="row">
 <div class="block">TileMatchDatabase extends room database.</div>
 </th>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><a href="edu/cnm/deepdive/tilematch/service/TileMatchDatabase.Converters.html" title="class in edu.cnm.deepdive.tilematch.service">TileMatchDatabase.Converters</a></td>
 <th class="colLast" scope="row">
 <div class="block">Subclass defines type converters.</div>
 </th>
 </tr>
-<tr id="i26" class="altColor">
-<td class="colFirst"><a href="edu/cnm/deepdive/tilematch/model/entity/User.html" title="class in edu.cnm.deepdive.tilematch.model.entity">User</a></td>
-<th class="colLast" scope="row">&nbsp;</th>
-</tr>
 <tr id="i27" class="rowColor">
+<td class="colFirst"><a href="edu/cnm/deepdive/tilematch/model/entity/User.html" title="class in edu.cnm.deepdive.tilematch.model.entity">User</a></td>
+<th class="colLast" scope="row">
+<div class="block">User entity class.</div>
+</th>
+</tr>
+<tr id="i28" class="altColor">
 <td class="colFirst"><a href="edu/cnm/deepdive/tilematch/model/dao/UserDao.html" title="interface in edu.cnm.deepdive.tilematch.model.dao">UserDao</a></td>
 <th class="colLast" scope="row">
 <div class="block">UserDao defines CRUD operations for user.</div>
 </th>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><a href="edu/cnm/deepdive/tilematch/model/pojo/UserWithGames.html" title="class in edu.cnm.deepdive.tilematch.model.pojo">UserWithGames</a></td>
-<th class="colLast" scope="row">&nbsp;</th>
+<th class="colLast" scope="row">
+<div class="block">Pojo connects User and Game class.</div>
+</th>
 </tr>
 </table>
 </li>

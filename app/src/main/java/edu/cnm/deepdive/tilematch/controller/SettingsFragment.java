@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
-import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -15,7 +14,6 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import edu.cnm.deepdive.tilematch.databinding.FragmentSettingsBinding;
-import edu.cnm.deepdive.tilematch.model.entity.Game;
 import edu.cnm.deepdive.tilematch.model.entity.Game.Difficulty;
 import edu.cnm.deepdive.tilematch.viewmodel.MainViewModel;
 
@@ -28,7 +26,9 @@ public class SettingsFragment extends Fragment {
   private MainViewModel mainViewModel;
 
   /**
-   * Inflates layout to viewGroup container. Defines navigation controller for the SettingsFragment.
+   * Inflates layout to viewGroup container. Defines navigation controller for the
+   * SettingsFragment.
+   *
    * @param inflater
    * @param container
    * @param savedInstanceState
@@ -54,6 +54,7 @@ public class SettingsFragment extends Fragment {
         });
         mainViewModel.startGame();
       }
+
       @Override
       public void onNothingSelected(AdapterView<?> parent) {
       }
@@ -64,6 +65,8 @@ public class SettingsFragment extends Fragment {
   @Override
   public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
-    binding.difficulty.setAdapter(new ArrayAdapter<Difficulty>(getContext(), android.R.layout.simple_spinner_item, Difficulty.values()));
+    binding.difficulty.setAdapter(
+        new ArrayAdapter<Difficulty>(getContext(), android.R.layout.simple_spinner_item,
+            Difficulty.values()));
   }
 }

@@ -15,6 +15,7 @@ public class Image {
 
   /**
    * Getter for webFormatUrl.
+   *
    * @return
    */
   public String getWebFormatUrl() {
@@ -23,6 +24,7 @@ public class Image {
 
   /**
    * Setter for webFormatUrl.
+   *
    * @param webFormatUrl
    */
   public void setWebFormatUrl(String webFormatUrl) {
@@ -40,6 +42,7 @@ public class Image {
 
     /**
      * Getter for search results.
+     *
      * @return
      */
     public Image[] getHits() {
@@ -48,6 +51,7 @@ public class Image {
 
     /**
      * Setter for search results.
+     *
      * @param hits
      */
     public void setHits(Image[] hits) {
@@ -56,6 +60,7 @@ public class Image {
 
     /**
      * toString method converts search results to string array.
+     *
      * @return
      */
     @Override

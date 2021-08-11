@@ -1,7 +1,5 @@
 package edu.cnm.deepdive.tilematch.service;
 
-import static edu.cnm.deepdive.tilematch.model.entity.Game.State.AWAITING_GUESS;
-
 import android.content.Context;
 import androidx.annotation.NonNull;
 import edu.cnm.deepdive.tilematch.BuildConfig;
@@ -32,6 +30,7 @@ public class GameRepository {
 
   /**
    * Constructor for game repository
+   *
    * @param context
    * @param rng
    */
@@ -44,8 +43,9 @@ public class GameRepository {
 
   /**
    * Single task maps search results to array list and subscribes on background thread.
-   * @return
+   *
    * @param difficulty
+   * @return
    */
   public Single<List<Tile>> getGallery(Difficulty difficulty) {
     return serviceProxy
@@ -65,6 +65,7 @@ public class GameRepository {
 
   /**
    * Single task maps images from gallery to tiles in a game.
+   *
    * @return
    */
   public Single<Game> startGame(Difficulty difficulty) { //TODO add param for difficulty.
@@ -81,6 +82,7 @@ public class GameRepository {
 
   /**
    * Single task maps tiles to positions in a game and game state changes on background thread.
+   *
    * @return
    */
   public Single<Game> handleSelection(@NonNull Game game, int position) {

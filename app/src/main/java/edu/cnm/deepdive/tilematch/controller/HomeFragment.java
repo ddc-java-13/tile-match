@@ -1,14 +1,13 @@
 package edu.cnm.deepdive.tilematch.controller;
 
 import android.os.Bundle;
-import android.view.View.OnClickListener;
-import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import edu.cnm.deepdive.tilematch.R;
 import edu.cnm.deepdive.tilematch.databinding.FragmentHomeBinding;
 
 /**
@@ -20,6 +19,7 @@ public class HomeFragment extends Fragment {
 
   /**
    * Inflates layout to viewGroup container. Defines navigation controller for the HomeFragment.
+   *
    * @param inflater
    * @param container
    * @param savedInstanceState
@@ -40,9 +40,11 @@ public class HomeFragment extends Fragment {
         });
     binding.gameSettings.setOnClickListener(
         //(v) -> navController.navigate(HomeFragmentDirections.actionHomeFragmentToSettingsFragment()));
-    (v) -> navController.navigate(HomeFragmentDirections.actionHomeFragmentToPreferencesFragment()));
+        (v) -> navController.navigate(
+            HomeFragmentDirections.actionHomeFragmentToPreferencesFragment()));
     binding.highScores.setOnClickListener(
-        (v) -> navController.navigate(HomeFragmentDirections.actionHomeFragmentToHighScoresFragment()));
+        (v) -> navController.navigate(
+            HomeFragmentDirections.actionHomeFragmentToHighScoresFragment()));
     return binding.getRoot();
   }
 }

@@ -21,6 +21,7 @@ public interface UserDao {
 
   /**
    * Single insert method for user.
+   *
    * @param user
    * @return
    */
@@ -29,6 +30,7 @@ public interface UserDao {
 
   /**
    * Varargs insert method for user.
+   *
    * @param users
    * @return
    */
@@ -37,6 +39,7 @@ public interface UserDao {
 
   /**
    * Collection insert method for user.
+   *
    * @param users
    * @return
    */
@@ -45,6 +48,7 @@ public interface UserDao {
 
   /**
    * Single update method for user.
+   *
    * @param user
    * @return
    */
@@ -53,6 +57,7 @@ public interface UserDao {
 
   /**
    * Varargs update method for user.
+   *
    * @param users
    * @return
    */
@@ -61,6 +66,7 @@ public interface UserDao {
 
   /**
    * Collection update method for user.
+   *
    * @param users
    * @return
    */
@@ -69,6 +75,7 @@ public interface UserDao {
 
   /**
    * Single delete method for user.
+   *
    * @param user
    * @return
    */
@@ -78,6 +85,7 @@ public interface UserDao {
 
   /**
    * Varargs delete method for user.
+   *
    * @param users
    * @return
    */
@@ -87,6 +95,7 @@ public interface UserDao {
 
   /**
    * Collection delete method for user.
+   *
    * @param users
    * @return
    */
@@ -95,6 +104,7 @@ public interface UserDao {
 
   /**
    * Query method for user returns all users by userId
+   *
    * @param userId
    * @return
    */

@@ -26,7 +26,7 @@
     catch(err) {
     }
 //-->
-var data = {"i0":10,"i1":10,"i2":10,"i3":10};
+var data = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -187,27 +187,37 @@ extends <a href="https://developer.android.com/reference/androidx/lifecycle/Andr
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="../model/entity/Game.Difficulty.html" title="enum in edu.cnm.deepdive.tilematch.model.entity">Game.Difficulty</a>&gt;</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getDifficulty()">getDifficulty</a></span>()</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="../model/entity/Game.html" title="class in edu.cnm.deepdive.tilematch.model.entity">Game</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getGame()">getGame</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Getter for game live data.</div>
 </td>
 </tr>
-<tr id="i1" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="https://developer.android.com/reference/java/lang/Throwable.html?is-external=true" title="class or interface in java.lang" class="externalLink">Throwable</a>&gt;</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getThrowable()">getThrowable</a></span>()</code></th>
 <td class="colLast">
 <div class="block">Getter for throwable.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#handleClick(int)">handleClick</a></span>&#8203;(int&nbsp;position)</code></th>
 <td class="colLast">
 <div class="block">Subscribes on clicks at given position in a game.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#setDifficulty(edu.cnm.deepdive.tilematch.model.entity.Game.Difficulty)">setDifficulty</a></span>&#8203;(<a href="../model/entity/Game.Difficulty.html" title="enum in edu.cnm.deepdive.tilematch.model.entity">Game.Difficulty</a>&nbsp;difficulty)</code></th>
+<td class="colLast">&nbsp;</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#startGame()">startGame</a></span>()</code></th>
 <td class="colLast">
@@ -290,6 +300,15 @@ extends <a href="https://developer.android.com/reference/androidx/lifecycle/Andr
 </dl>
 </li>
 </ul>
+<a id="getDifficulty()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getDifficulty</h4>
+<pre class="methodSignature">public&nbsp;<a href="https://developer.android.com/reference/androidx/lifecycle/LiveData.html?is-external=true" title="class or interface in androidx.lifecycle" class="externalLink">LiveData</a>&lt;<a href="../model/entity/Game.Difficulty.html" title="enum in edu.cnm.deepdive.tilematch.model.entity">Game.Difficulty</a>&gt;&nbsp;getDifficulty()</pre>
+</li>
+</ul>
 <a id="getThrowable()">
 <!--   -->
 </a>
@@ -316,7 +335,7 @@ extends <a href="https://developer.android.com/reference/androidx/lifecycle/Andr
 <a id="handleClick(int)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>handleClick</h4>
 <pre class="methodSignature">public&nbsp;void&nbsp;handleClick&#8203;(int&nbsp;position)</pre>
@@ -325,6 +344,15 @@ extends <a href="https://developer.android.com/reference/androidx/lifecycle/Andr
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>position</code> - </dd>
 </dl>
+</li>
+</ul>
+<a id="setDifficulty(edu.cnm.deepdive.tilematch.model.entity.Game.Difficulty)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>setDifficulty</h4>
+<pre class="methodSignature">public&nbsp;void&nbsp;setDifficulty&#8203;(<a href="../model/entity/Game.Difficulty.html" title="enum in edu.cnm.deepdive.tilematch.model.entity">Game.Difficulty</a>&nbsp;difficulty)</pre>
 </li>
 </ul>
 </li>

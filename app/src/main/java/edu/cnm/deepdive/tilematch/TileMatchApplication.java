@@ -2,12 +2,9 @@ package edu.cnm.deepdive.tilematch;
 
 import android.app.Application;
 import com.facebook.stetho.Stetho;
-import com.squareup.picasso.OkHttp3Downloader;
 import com.squareup.picasso.Picasso;
 import edu.cnm.deepdive.tilematch.service.TileMatchDatabase;
 import io.reactivex.schedulers.Schedulers;
-import okhttp3.Interceptor.Chain;
-import okhttp3.OkHttpClient;
 
 /**
  * Initializes (in the {@link #onCreate()} method) application-level resources. This class

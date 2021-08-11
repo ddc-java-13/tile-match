@@ -12,8 +12,6 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import edu.cnm.deepdive.tilematch.adapter.GalleryAdapter;
 import edu.cnm.deepdive.tilematch.databinding.FragmentGameBinding;
-import edu.cnm.deepdive.tilematch.model.pojo.Tile;
-import edu.cnm.deepdive.tilematch.model.pojo.Tile.State;
 import edu.cnm.deepdive.tilematch.viewmodel.MainViewModel;
 
 /**
@@ -27,6 +25,7 @@ public class GameFragment extends Fragment {
 
   /**
    * Inflates layout to viewGroup container. Defines navigation controller for the GameFragment.
+   *
    * @param inflater
    * @param container
    * @param savedInstanceState
@@ -48,6 +47,7 @@ public class GameFragment extends Fragment {
 
   /**
    * Initializes viewModel. Map tiles to positions in recyclerView.
+   *
    * @param view
    * @param savedInstanceState
    */

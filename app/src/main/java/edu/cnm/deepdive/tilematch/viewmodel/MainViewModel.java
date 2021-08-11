@@ -30,6 +30,7 @@ public class MainViewModel extends AndroidViewModel {
 
   /**
    * MainViewModel constructor.
+   *
    * @param application
    */
   public MainViewModel(@NonNull Application application) {
@@ -46,6 +47,7 @@ public class MainViewModel extends AndroidViewModel {
 
   /**
    * Getter for game live data.
+   *
    * @return
    */
   public LiveData<Game> getGame() {
@@ -58,12 +60,12 @@ public class MainViewModel extends AndroidViewModel {
 
   /**
    * Getter for throwable.
+   *
    * @return
    */
   public LiveData<Throwable> getThrowable() {
     return throwable;
   }
-
 
 
   /**
@@ -82,6 +84,7 @@ public class MainViewModel extends AndroidViewModel {
 
   /**
    * Subscribes on clicks at given position in a game.
+   *
    * @param position
    */
   public void handleClick(int position) {
@@ -106,7 +109,8 @@ public class MainViewModel extends AndroidViewModel {
   }
 
   private Difficulty getDifficultyPreference() {
-    return Difficulty.valueOf(preferences.getString("difficulty_preference", Difficulty.EASY.toString()));
+    return Difficulty.valueOf(
+        preferences.getString("difficulty_preference", Difficulty.EASY.toString()));
   }
 
 }

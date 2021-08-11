@@ -21,6 +21,7 @@ public interface GameDao {
 
   /**
    * Single insert method for game.
+   *
    * @param game
    * @return
    */
@@ -29,6 +30,7 @@ public interface GameDao {
 
   /**
    * Varargs insert method for game.
+   *
    * @param games
    * @return
    */
@@ -37,6 +39,7 @@ public interface GameDao {
 
   /**
    * Collection insert method for game.
+   *
    * @param games
    * @return
    */
@@ -45,6 +48,7 @@ public interface GameDao {
 
   /**
    * Single update method for game.
+   *
    * @param game
    * @return
    */
@@ -53,6 +57,7 @@ public interface GameDao {
 
   /**
    * Varargs update method for game.
+   *
    * @param games
    * @return
    */
@@ -61,6 +66,7 @@ public interface GameDao {
 
   /**
    * Collection update method for game.
+   *
    * @param games
    * @return
    */
@@ -69,6 +75,7 @@ public interface GameDao {
 
   /**
    * Single delete method for game.
+   *
    * @param game
    * @return
    */
@@ -77,6 +84,7 @@ public interface GameDao {
 
   /**
    * Varargs delete method for game.
+   *
    * @param games
    * @return
    */
@@ -85,6 +93,7 @@ public interface GameDao {
 
   /**
    * Collection delete method for game.
+   *
    * @param games
    * @return
    */
@@ -93,6 +102,7 @@ public interface GameDao {
 
   /**
    * Query method for game returns all games by gameId
+   *
    * @param gameId
    * @return
    */
@@ -102,6 +112,7 @@ public interface GameDao {
 
   /**
    * Query method for game returns all games ordered by playTime
+   *
    * @return
    */
   @Query("SELECT * FROM game ORDER BY play_time ASC")
@@ -110,6 +121,7 @@ public interface GameDao {
 
   /**
    * Query method for game returns all games ordered by attempts
+   *
    * @return
    */
   @Query("SELECT * FROM game ORDER BY attempts ASC")
@@ -118,6 +130,7 @@ public interface GameDao {
 
   /**
    * Query method for game returns all games ordered by difficulty
+   *
    * @return
    */
   @Query("SELECT * FROM game ORDER BY difficulty ASC")
@@ -126,6 +139,7 @@ public interface GameDao {
 
   /**
    * Query method for game returns all games ordered by timestamp
+   *
    * @return
    */
   @Query("SELECT * FROM game ORDER BY timestamp ASC")

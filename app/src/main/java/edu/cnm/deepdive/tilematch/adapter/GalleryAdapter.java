@@ -8,7 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.squareup.picasso.Picasso;
 import edu.cnm.deepdive.tilematch.adapter.GalleryAdapter.Holder;
-import edu.cnm.deepdive.tilematch.databinding.FragmentGameBinding;
 import edu.cnm.deepdive.tilematch.databinding.ItemGalleryBinding;
 import edu.cnm.deepdive.tilematch.model.dto.Image;
 import edu.cnm.deepdive.tilematch.model.pojo.Tile;
@@ -27,6 +26,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<Holder> {
 
   /**
    * Constructor for GalleryAdapter class
+   *
    * @param context
    * @param tiles
    * @param onTileClickHelper
@@ -41,6 +41,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<Holder> {
 
   /**
    * Creates a holder instance for the GalleryAdapter class.
+   *
    * @param parent
    * @param viewType
    * @return
@@ -54,6 +55,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<Holder> {
 
   /**
    * Update recyclerView with holder at given position.
+   *
    * @param holder
    * @param position
    */
@@ -64,6 +66,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<Holder> {
 
   /**
    * Returns number of tiles.
+   *
    * @return
    */
   @Override
@@ -79,6 +82,7 @@ public class GalleryAdapter extends RecyclerView.Adapter<Holder> {
 
     /**
      * Create binding instance for Holder subclass.
+     *
      * @param binding
      */
     public Holder(ItemGalleryBinding binding) {
@@ -89,12 +93,13 @@ public class GalleryAdapter extends RecyclerView.Adapter<Holder> {
     /**
      * Defines tile state and sets on click listeners to each instance of a tile. Utilizes picasso
      * to load images at tile positions.
+     *
      * @param position
      */
     public void bind(int position) {
       Tile tile = tiles.get(position);
-      if (tile.getState()== State.FACE_DOWN) {
-        binding.number.setText(String.valueOf(position+1));
+      if (tile.getState() == State.FACE_DOWN) {
+        binding.number.setText(String.valueOf(position + 1));
         binding.image.setVisibility(View.GONE);
         binding.number.setVisibility(View.VISIBLE);
       } else {

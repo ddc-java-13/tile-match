@@ -179,7 +179,7 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>io.reactivex.Single&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/pojo/Tile.html" title="class in edu.cnm.deepdive.tilematch.model.pojo">Tile</a>&gt;&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getGallery()">getGallery</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#getGallery(edu.cnm.deepdive.tilematch.model.entity.Game.Difficulty)">getGallery</a></span>&#8203;(<a href="../model/entity/Game.Difficulty.html" title="enum in edu.cnm.deepdive.tilematch.model.entity">Game.Difficulty</a>&nbsp;difficulty)</code></th>
 <td class="colLast">
 <div class="block">Single task maps search results to array list and subscribes on background thread.</div>
 </td>
@@ -194,7 +194,7 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>io.reactivex.Single&lt;<a href="../model/entity/Game.html" title="class in edu.cnm.deepdive.tilematch.model.entity">Game</a>&gt;</code></td>
-<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#startGame()">startGame</a></span>()</code></th>
+<th class="colSecond" scope="row"><code><span class="memberNameLink"><a href="#startGame(edu.cnm.deepdive.tilematch.model.entity.Game.Difficulty)">startGame</a></span>&#8203;(<a href="../model/entity/Game.Difficulty.html" title="enum in edu.cnm.deepdive.tilematch.model.entity">Game.Difficulty</a>&nbsp;difficulty)</code></th>
 <td class="colLast">
 <div class="block">Single task maps images from gallery to tiles in a game.</div>
 </td>
@@ -249,26 +249,28 @@ extends <a href="https://developer.android.com/reference/java/lang/Object.html?i
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a id="getGallery()">
+<a id="getGallery(edu.cnm.deepdive.tilematch.model.entity.Game.Difficulty)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getGallery</h4>
-<pre class="methodSignature">public&nbsp;io.reactivex.Single&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/pojo/Tile.html" title="class in edu.cnm.deepdive.tilematch.model.pojo">Tile</a>&gt;&gt;&nbsp;getGallery()</pre>
+<pre class="methodSignature">public&nbsp;io.reactivex.Single&lt;<a href="https://developer.android.com/reference/java/util/List.html?is-external=true" title="class or interface in java.util" class="externalLink">List</a>&lt;<a href="../model/pojo/Tile.html" title="class in edu.cnm.deepdive.tilematch.model.pojo">Tile</a>&gt;&gt;&nbsp;getGallery&#8203;(<a href="../model/entity/Game.Difficulty.html" title="enum in edu.cnm.deepdive.tilematch.model.entity">Game.Difficulty</a>&nbsp;difficulty)</pre>
 <div class="block">Single task maps search results to array list and subscribes on background thread.</div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>difficulty</code> - </dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 </dl>
 </li>
 </ul>
-<a id="startGame()">
+<a id="startGame(edu.cnm.deepdive.tilematch.model.entity.Game.Difficulty)">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>startGame</h4>
-<pre class="methodSignature">public&nbsp;io.reactivex.Single&lt;<a href="../model/entity/Game.html" title="class in edu.cnm.deepdive.tilematch.model.entity">Game</a>&gt;&nbsp;startGame()</pre>
+<pre class="methodSignature">public&nbsp;io.reactivex.Single&lt;<a href="../model/entity/Game.html" title="class in edu.cnm.deepdive.tilematch.model.entity">Game</a>&gt;&nbsp;startGame&#8203;(<a href="../model/entity/Game.Difficulty.html" title="enum in edu.cnm.deepdive.tilematch.model.entity">Game.Difficulty</a>&nbsp;difficulty)</pre>
 <div class="block">Single task maps images from gallery to tiles in a game.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>

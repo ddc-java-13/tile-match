@@ -16,6 +16,7 @@ public interface GalleryDao {
 
   /**
    * Single insert method for gallery.
+   *
    * @param image
    * @return
    */
@@ -24,6 +25,7 @@ public interface GalleryDao {
 
   /**
    * Varargs insert method for gallery.
+   *
    * @param image
    * @return
    */
@@ -32,6 +34,7 @@ public interface GalleryDao {
 
   /**
    * Collections insert method for gallery.
+   *
    * @param gallery
    * @return
    */
@@ -40,6 +43,7 @@ public interface GalleryDao {
 
   /**
    * Single update method for gallery.
+   *
    * @param image
    * @return
    */
@@ -48,6 +52,7 @@ public interface GalleryDao {
 
   /**
    * Varargs update method for gallery.
+   *
    * @param image
    * @return
    */
@@ -56,6 +61,7 @@ public interface GalleryDao {
 
   /**
    * Collections update method for gallery.
+   *
    * @param gallery
    * @return
    */
@@ -64,6 +70,7 @@ public interface GalleryDao {
 
   /**
    * Single delete method for gallery.
+   *
    * @param image
    * @return
    */
@@ -72,6 +79,7 @@ public interface GalleryDao {
 
   /**
    * Varargs delete method for gallery.
+   *
    * @param image
    * @return
    */
@@ -80,6 +88,7 @@ public interface GalleryDao {
 
   /**
    * Collections delete method for gallery.
+   *
    * @param games
    * @return
    */
