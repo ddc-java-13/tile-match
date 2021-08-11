@@ -325,6 +325,9 @@ public class Game {
    * Game state enum.
    */
   public enum State {
+    /**
+     * Constructor for game state awaiting guess enum.
+     */
     AWAITING_GUESS {
       @Override
       public void handleSelection(Game game, int selection) {
@@ -341,6 +344,9 @@ public class Game {
       }
     },
 
+    /**
+     * Constructor for game state awaiting match enum.
+     */
     AWAITING_MATCH {
       @Override
       public void handleSelection(Game game, int selection) {
@@ -365,14 +371,14 @@ public class Game {
       }
     },
 
-    COMPLETED;
-
     /**
-     * Constructor for game state enum.
+     * Constructor for game state completed enum.
      *
      * @param game
      * @param selection
      */
+    COMPLETED;
+
     public void handleSelection(Game game, int selection) {
     }
 

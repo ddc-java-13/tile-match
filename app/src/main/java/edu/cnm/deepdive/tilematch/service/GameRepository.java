@@ -68,14 +68,14 @@ public class GameRepository {
    *
    * @return
    */
-  public Single<Game> startGame(Difficulty difficulty) { //TODO add param for difficulty.
+  public Single<Game> startGame(Difficulty difficulty) {
     return getGallery(difficulty)
         .map((tiles) -> {
           Collections.shuffle(tiles);
           Game game = new Game();
           game.setTimestamp(new Date());
           game.getTiles().addAll(tiles);
-          game.setDifficulty(difficulty); //TODO use difficulty paramater
+          game.setDifficulty(difficulty);
           return game;
         });
   }
