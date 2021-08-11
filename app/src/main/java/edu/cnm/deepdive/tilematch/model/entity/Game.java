@@ -162,8 +162,19 @@ public class Game {
     this.state = state;
   }
 
+
   public enum Difficulty {
-    EASY, MEDIUM, HARD;
+    EASY(4), MEDIUM(6), HARD(8);
+
+    private final int gameDifficulty;
+
+    Difficulty(int difficulty) {
+    this.gameDifficulty = difficulty;
+    }
+
+    public int getGameDifficulty() {
+      return gameDifficulty;
+    }
 
     @TypeConverter
     public static Integer difficultyToInteger(Difficulty value) {

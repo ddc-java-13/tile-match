@@ -2,12 +2,15 @@ package edu.cnm.deepdive.tilematch.viewmodel;
 
 import android.annotation.SuppressLint;
 import android.app.Application;
+import android.content.SharedPreferences;
 import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.preference.PreferenceManager;
 import edu.cnm.deepdive.tilematch.model.entity.Game;
+import edu.cnm.deepdive.tilematch.model.entity.Game.Difficulty;
 import edu.cnm.deepdive.tilematch.service.GameRepository;
 import io.reactivex.disposables.CompositeDisposable;
 import java.util.Random;
@@ -22,6 +25,8 @@ public class MainViewModel extends AndroidViewModel {
   private final GameRepository gameRepository;
   private final CompositeDisposable pending;
   private final Random rng;
+  private final MutableLiveData<Difficulty> difficulty;
+  private final SharedPreferences preferences;
 
   /**
    * MainViewModel constructor.
@@ -34,6 +39,8 @@ public class MainViewModel extends AndroidViewModel {
     rng = new Random();
     gameRepository = new GameRepository(application, rng);
     pending = new CompositeDisposable();
+    difficulty = new MutableLiveData<>();
+    preferences = PreferenceManager.getDefaultSharedPreferences(application);
     startGame();
   }
 
@@ -45,6 +52,10 @@ public class MainViewModel extends AndroidViewModel {
     return game;
   }
 
+  public LiveData<Difficulty> getDifficulty() {
+    return difficulty;
+  }
+
   /**
    * Getter for throwable.
    * @return
@@ -53,13 +64,15 @@ public class MainViewModel extends AndroidViewModel {
     return throwable;
   }
 
+
+
   /**
    * Subscribes on MutableLiveData for a game.
    */
   @SuppressLint("CheckResult")
   public void startGame() {
     pending.add(
-        gameRepository.startGame()
+        gameRepository.startGame(getDifficultyPreference())
             .subscribe(
                 game::postValue,
                 this::setThrowable
@@ -83,8 +96,17 @@ public class MainViewModel extends AndroidViewModel {
     );
   }
 
+  public void setDifficulty(Difficulty difficulty) {
+    this.difficulty.setValue(difficulty);
+  }
+
   private void setThrowable(Throwable throwable) {
     Log.e(getClass().getSimpleName(), throwable.getMessage(), throwable);
     this.throwable.postValue(throwable);
   }
+
+  private Difficulty getDifficultyPreference() {
+    return Difficulty.valueOf(preferences.getString("difficulty_preference", Difficulty.EASY.toString()));
+  }
+
 }

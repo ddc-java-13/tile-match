@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <ListPreference
+    android:key="difficulty_preference"
+    android:title="Difficulty"
+    android:summary="Sets size of gallery of images."/>
+
+  <Preference
+    android:key="back_button"
+    android:widgetLayout="@layout/fragment_preferences"/>
+</PreferenceScreen>

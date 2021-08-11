@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import edu.cnm.deepdive.tilematch.BuildConfig;
 import edu.cnm.deepdive.tilematch.model.dto.Image;
+import edu.cnm.deepdive.tilematch.model.entity.Game.Difficulty;
 import io.reactivex.Single;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

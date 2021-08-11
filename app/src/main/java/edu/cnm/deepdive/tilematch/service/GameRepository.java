@@ -45,10 +45,11 @@ public class GameRepository {
   /**
    * Single task maps search results to array list and subscribes on background thread.
    * @return
+   * @param difficulty
    */
-  public Single<List<Tile>> getGallery() {
+  public Single<List<Tile>> getGallery(Difficulty difficulty) {
     return serviceProxy
-        .getHits(BuildConfig.API_KEY, 8)
+        .getHits(BuildConfig.API_KEY, difficulty.getGameDifficulty())
         .map(SearchResult::getHits)
         .map((images) -> {
               List<Tile> tiles = new ArrayList<>();
@@ -66,14 +67,14 @@ public class GameRepository {
    * Single task maps images from gallery to tiles in a game.
    * @return
    */
-  public Single<Game> startGame() { //TODO add param for difficulty.
-    return getGallery()
+  public Single<Game> startGame(Difficulty difficulty) { //TODO add param for difficulty.
+    return getGallery(difficulty)
         .map((tiles) -> {
           Collections.shuffle(tiles);
           Game game = new Game();
           game.setTimestamp(new Date());
           game.getTiles().addAll(tiles);
-          game.setDifficulty(Difficulty.EASY); //TODO use difficulty paramater
+          game.setDifficulty(difficulty); //TODO use difficulty paramater
           return game;
         });
   }

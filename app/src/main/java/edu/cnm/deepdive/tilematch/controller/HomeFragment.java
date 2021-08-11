@@ -39,7 +39,8 @@ public class HomeFragment extends Fragment {
           }
         });
     binding.gameSettings.setOnClickListener(
-        (v) -> navController.navigate(HomeFragmentDirections.actionHomeFragmentToSettingsFragment()));
+        //(v) -> navController.navigate(HomeFragmentDirections.actionHomeFragmentToSettingsFragment()));
+    (v) -> navController.navigate(HomeFragmentDirections.actionHomeFragmentToPreferencesFragment()));
     binding.highScores.setOnClickListener(
         (v) -> navController.navigate(HomeFragmentDirections.actionHomeFragmentToHighScoresFragment()));
     return binding.getRoot();
