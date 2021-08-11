@@ -56,4 +56,4 @@ Construct tile sets from artwork images retrieved by querying one of several pub
 
 ## [Instructions](instructions.md)
 
-## [Jave Docs](api/index.html)
+## [Java Docs](api/index.html)
