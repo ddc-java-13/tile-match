@@ -12,6 +12,7 @@ Currently Tile Match is a fully functional game with intuitive navigation betwee
 There are several visual elements that are not yet implemented in the game.
 * When a tile scheme is selected it is intended that an image from this selection would appear as the background image in all non-game screens, the game screen would be dedicated to gameplay.
 * The buttons in the game are intended to be simple in nature but a gradient effect would make them more appealing while keeping to a simple design.
+* There is currently a display error involving the placement of the back button on the settings screen, It is functional, but unappealing.
 
 Stretch Goals for Tile Match.
 
