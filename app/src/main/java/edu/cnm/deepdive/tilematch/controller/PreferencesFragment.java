@@ -1,6 +1,9 @@
 package edu.cnm.deepdive.tilematch.controller;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.util.AttributeSet;
+import android.view.View;
 import androidx.navigation.Navigation;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -36,11 +39,14 @@ public class PreferencesFragment extends PreferenceFragmentCompat {
         .toArray(String[]::new);
     pref.setEntries(displayValues);
     pref.setEntryValues(values);
-    Preference backButton = findPreference("back_button");
-    backButton.setOnPreferenceClickListener((p) -> {
-      Navigation.findNavController(getActivity(), R.id.nav_host_fragment_container)
-          .navigate(PreferencesFragmentDirections.actionPreferencesFragmentToHomeFragment());
-      return true;
-    });
+    findPreference("back_button").setOnPreferenceClickListener((p) -> goBack());
   }
+
+  public boolean goBack() {
+    Navigation.findNavController(getActivity(), R.id.nav_host_fragment_container)
+        .navigate(PreferencesFragmentDirections.actionPreferencesFragmentToHomeFragment());
+    return false;
+  }
+
+
 }
